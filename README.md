@@ -1,4 +1,4 @@
-# Quasar App (-)
+# Quasar App (-) created using quasar-cli and vite
 
 A Quasar Project
 
@@ -38,4 +38,8 @@ quasar build
 ```
 
 ### Customize the configuration
+See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+
+
+### Mock Api src/actions
 See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
