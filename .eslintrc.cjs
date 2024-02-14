@@ -47,11 +47,11 @@ module.exports = {
     // https://eslint.vuejs.org/user-guide/#why-doesn-t-it-work-on-vue-files
     // required to lint *.vue files
     'vue'
-    
+
     // https://github.com/typescript-eslint/typescript-eslint/issues/389#issuecomment-509292674
     // Prettier has not been included as plugin to avoid performance impact
     // add it as an extension for your IDE
-    
+
   ],
 
   globals: {
@@ -69,7 +69,7 @@ module.exports = {
 
   // add your custom rules here
   rules: {
-    
+
     'prefer-promise-reject-errors': 'off',
 
     quotes: ['warn', 'single', { avoidEscape: true }],
@@ -85,6 +85,46 @@ module.exports = {
     'no-unused-vars': 'off',
 
     // allow debugger during development only
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'vue/attribute-hyphenation': [
+      'error',
+      'never',
+      {
+        ignore: ['is-full-page']
+      }
+    ],
+    'vue/html-indent': ['error', 'tab'],
+    'vue/max-attributes-per-line': [
+      'error',
+      {
+        singleline: {
+          max: 2
+        },
+        multiline: {
+          max: 1
+        }
+      }
+    ],
+    'vue/no-v-html': 'error',
+    'vue/valid-v-slot': ['error', { allowModifiers: true }],
+    // 'vue/component-name-in-template-casing': [
+    //   'error',
+    //   'PascalCase',
+    //   {
+    //     registeredComponentsOnly: false
+    //   }
+    // ],
+    'vue/html-self-closing': [
+      'error',
+      {
+        html: {
+          void: 'never',
+          normal: 'always',
+          component: 'always'
+        },
+        svg: 'always',
+        math: 'always'
+      }
+    ]
   }
 }
